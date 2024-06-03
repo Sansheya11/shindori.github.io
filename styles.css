@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    animation: gradientBackground 10s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar-brand .logo {
+    height: 50px;
+}
+
+.jumbotron {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    animation: gradientBackground 15s ease infinite;
+    padding: 100px 0;
+}
+
+.hover-title, .hover-paragraph {
+    transition: all 0.3s ease;
+}
+
+.hover-title:hover, .hover-paragraph:hover {
+    color: blue;
+    background: linear-gradient(45deg, #ff0066, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+
+button {
+    border-radius: 25px;
+}
+
+#gallery {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    #gallery {
+        display: block;
+    }
+}
+
+.hoverable {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hoverable:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:hover, a:hover {
+    background-color: #0056b3 !important;
+    color: white !important;
+    border: 1px solid #0056b3 !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 5px #007bff;
+    outline: none;
+}
+
+.form-control {
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #007bff, #6610f2);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #6610f2, #007bff);
+}
+
+img {
+    border-radius: 10px;
+}
+
+/* Ensure the form and video iframe are responsive */
+@media (max-width: 767.98px) {
+    .form-control, .btn-primary {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar-brand .logo {
+        height: 40px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 auto;
+    }
+
+    .jumbotron {
+        padding: 50px 0;
+    }
+
+    .hover-title, .hover-paragraph {
+        text-align: center;
+    }
+
+    .gallery-image img {
+        margin-bottom: 15px;
+    }
+}
